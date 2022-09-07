@@ -1,3 +1,3 @@
 # SocketDemo
 SocketDemo
-## SuiperSocket Demo
+## SuperSocket Demo
