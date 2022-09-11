@@ -1,0 +1,54 @@
+﻿@{
+    ViewData["Title"] = "WebSocket";
+}
+<div id="mainContent" class="text-center">
+    <h1>WebSocket</h1>
+    <input id="message" type="text" />
+    <button id="send">发送</button>
+</div>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+<script type="text/javascript">
+    $(function() {
+        //发起一个Websocket链接
+        var socket = new WebSocket("ws://localhost:5167/webSocket");
+
+
+        $("#send").on("click", function() {
+            console.log("Send Message"+$("#message").val());
+            debugger;
+            //发送消息
+            socket.send($("#message").val());
+        });
+
+
+        //onopen:当socket打开链接后，就会触发这个事件
+        socket.onopen = function(evt) {
+            console.log("Connection open...");
+            socket.send("WebSocket Connection Open");
+        }
+
+        //当有消息来了以后，就会触发这个事件
+        socket.onmessage = function(evt) {
+            console.log(evt);
+            console.log("Receive Message" + evt.data);
+            var data = evt.data;
+            var alertDiv = document.createElement("div");
+            alertDiv.className = "alert alert-success";
+
+            alertDiv.innerHTML = "Receive Message:" + evt.data;
+            document.getElementById("mainContent").append(alertDiv);
+        }
+
+        //当链接关闭的时候触发这个事件
+        socket.onclose = function(evt) {
+            console.log("Connection close.")
+        }
+    })
+</script>
+
+
+
+
