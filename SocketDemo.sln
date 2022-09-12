@@ -5,7 +5,9 @@ VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SuperSocketDemo", "SuperSocketDemo\SuperSocketDemo.csproj", "{6009FDF1-B56E-4507-89F7-347F5931D3F7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSocketDemo", "WebSocketDemo\WebSocketDemo.csproj", "{3E42060A-7EDE-42A8-98DF-99FC94DABF59}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebSocketDemo", "WebSocketDemo\WebSocketDemo.csproj", "{3E42060A-7EDE-42A8-98DF-99FC94DABF59}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalRDemo", "SignalRDemo\SignalRDemo.csproj", "{6C5A8E79-A37B-4C41-970B-723A5D718694}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{3E42060A-7EDE-42A8-98DF-99FC94DABF59}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E42060A-7EDE-42A8-98DF-99FC94DABF59}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E42060A-7EDE-42A8-98DF-99FC94DABF59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C5A8E79-A37B-4C41-970B-723A5D718694}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C5A8E79-A37B-4C41-970B-723A5D718694}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C5A8E79-A37B-4C41-970B-723A5D718694}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C5A8E79-A37B-4C41-970B-723A5D718694}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
